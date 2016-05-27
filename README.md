@@ -2,6 +2,7 @@ WDIO JIRA Service
 ==========
 
 > A WebdriverIO service. It transitions associated JIRA issues to a 'success' or 'failure' status, and optionally adds a comment on update.
+
 ## Installation
 
 The simplest installation is to keep `wdio-jira-service` as a devDependency in your `package.json`.
