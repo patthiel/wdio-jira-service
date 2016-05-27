@@ -1,7 +1,7 @@
 WDIO JIRA Service
 ==========
 
-> A WebdriverIO service. It transitions associated JIRA issues to a 'success' or 'failure' status, and optionally adds a comment on update.
+> A WebdriverIO service. It uses the [JIRA REST API](https://docs.atlassian.com/jira/REST/latest/) to transition associated JIRA issues to a `success` or `failure` status, and optionally adds a comment on update.
 
 ## Installation
 
