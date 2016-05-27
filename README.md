@@ -25,9 +25,11 @@ Instructions on how to install `WebdriverIO` can be found [here.](http://webdriv
 
 ## Configuration
 
-In order to use the service you need to set `jiraHost`, `jiraUser`, `jiraPassword`, `jiraFailureId`, `jiraFailureMessage`, `jiraSuccessId`, `jiraSuccessMessage`  in your `wdio.conf.js` file. You also need to set a value for `key` in each of your spec files. The service passes or fails a specifed JIRA issue based on the the results of running a spec file. A spec file is successful/passed only if there are no test failures encountered. Also of note: currently there can only be a one-to-one spec file -> JIRA issue relationship. 
+In order to use the service you need to set `jiraHost`, `jiraUser`, `jiraPassword`, `jiraFailureId`, `jiraFailureMessage`, `jiraSuccessId`, `jiraSuccessMessage`  in your `wdio.conf.js` file. You also need to set a value for `jiraIssue` in each of your spec files. The service passes or fails the specifed JIRA issue based on the the results of running a spec file. A spec file is only successful/passed if it contains no failures. Also of note: currently there can only be a one-to-one spec file -> JIRA issue relationship. 
 
-// wdio.conf.jsy
+
+```js
+// wdio.conf.js
 export.config = {
   // ...
   services: ['jira'],
@@ -41,6 +43,7 @@ export.config = {
   // ...
 };
 ```
+
 
 ## Options
 
