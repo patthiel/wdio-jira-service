@@ -33,7 +33,7 @@ In order to use the service you need to set `jiraHost`, `jiraUser`, `jiraPasswor
 export.config = {
   // ...
   services: ['jira'],
-  jiraHost: 'https://myteam.atlassian.net'
+  jiraHost: 'myteam.atlassian.net'
   jiraUser: 'myjirauser',
   jiraPassword: 'mypassword',
   jiraFailureId: 'idNumber'
@@ -48,7 +48,7 @@ export.config = {
 ## Options
 
 ### jiraHost
-Your organization's JIRA host. Must be HTTPS.
+Your organization's JIRA host.
 
 Type: `String`
 
