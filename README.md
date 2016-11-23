@@ -33,13 +33,15 @@ In order to use the service you need to set `jiraHost`, `jiraUser`, `jiraPasswor
 export.config = {
   // ...
   services: ['jira'],
-  jiraHost: 'myteam.atlassian.net'
-  jiraUser: 'myjirauser',
-  jiraPassword: 'mypassword',
-  jiraFailureId: 'idNumber'
-  jiraFailureMessage: 'Test failed!' // Also a good place to @ a specific user / group on test failures or specify associated build numbers.
-  jiraSuccessId: 'idNumber'
-  jiraSuccessMessage: 'Test passed!'
+  jiraConfig: {
+      host: 'myteam.atlassian.net'
+      username: 'myjirauser',
+      password: 'mypassword',
+      failureId: 'idNumber'
+      failureMessage: 'Test failed!' // Also a good place to @ a specific user / group on test failures or specify associated build numbers.
+      successId: 'idNumber'
+      successMessage: 'Test passed!'
+  }
   // ...
 };
 ```
@@ -47,37 +49,37 @@ export.config = {
 
 ## Options
 
-### jiraHost
+### host
 Your organization's JIRA host.
 
 Type: `String`
 
-### jiraUser
+### username
 The JIRA account name of the user you are linking to the wdio-jira-service.
 
 Type: `String`
 
-### jiraPassword
+### password
 The password of the JIRA account you are linking to the wdio-jira-service.
 
 Type: `String`
 
-### jiraFailureId
+### failureId
 The JIRA transition ID of your 'failure' status. Responsible for updating the associated JIRA issue in your spec file to a 'failed' status.
 
 Type: `String`
 
-### jiraFailureMessage
+### failureMessage
 A comment the wdio-jira-service will add to your linked JIRA issue when a spec fails.
 
 Type: `String`
 
-### jiraSuccessId
+### successId
 The JIRA transition ID of your 'success' status. Responsible for updating the associated JIRA issue in your spec file to a 'success' status.
 
 Type: `String`
 
-### jiraSuccessMessage
+### successMessage
 A comment the wdio-jira-service will add to your linked JIRA issue when a spec succeeds.
 
 Type: `String`
