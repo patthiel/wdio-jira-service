@@ -1,3 +1,3 @@
-var JiraService = require('./build/jira-service');
+var JiraService = require('./build/jira-service')
 
-module.exports = new JiraService();
+module.exports = new JiraService()
