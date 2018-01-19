@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webdriverio/wdio-jira-service.git"
+    "url": "git+https://github.com/patthiel/wdio-jira-service.git"
   },
   "keywords": [
     "webdriverio",
@@ -23,9 +23,9 @@
   "author": "Patrick Thiel <patthiel@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webdriverio/wdio-jira-service/issues"
+    "url": "https://github.com/patthiel/wdio-jira-service/issues"
   },
-  "homepage": "https://github.com/webdriverio/wdio-jira-service#readme",
+  "homepage": "https://github.com/patthiel/wdio-jira-service#readme",
   "dependencies": {},
   "devDependencies": {
     "babel": "^5.8.23",
@@ -49,7 +49,6 @@
     "load-grunt-tasks": "^3.2.0"
   },
   "contributors": [
-    "Patrick Thiel <patthiel@gmail.com>",
-    "Christian Bromann <github@christian-bromann.com>"
+    "Patrick Thiel <patthiel@gmail.com>"
   ]
 }
