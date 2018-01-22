@@ -50,9 +50,9 @@
     "load-grunt-tasks": "^3.4.1"
   },
   "contributors": [
+    "Pat Thiel <pthiel@urbn.com>",
     "Pat Thiel <pthiel@anthropologie.com>",
     "Pat Thiel <patthiel@gmail.com>",
-    "Pat Thiel <thielp1@uoianthielp1.urbanout.com>",
-    "Pat Thiel <pthiel@urbn.com>"
+    "Pat Thiel <thielp1@uoianthielp1.urbanout.com>"
   ]
 }
