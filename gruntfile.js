@@ -4,41 +4,29 @@ module.exports = function (grunt) {
         clean: ['build'],
         babel: {
             options: {
-                sourceMap: false,
-                plugins: ['object-assign']
+                sourceMap: false
             },
             dist: {
                 files: [{
                     expand: true,
                     cwd: './lib',
-                    src: ['*.js'],
+                    src: ['**/*.js'],
                     dest: 'build',
                     ext: '.js'
                 }]
             }
         },
-        mocha_istanbul: {
-            coverage: {
-                src: ['test/*.spec.js'],
-                options: {
-                    scriptPath: require.resolve('isparta/bin/isparta'),
-                    reporter: 'spec',
-                    mochaOptions: ['--compilers', 'js:babel/register', '--recursive'],
-                    require: ['should']
-                }
-            }
-        },
         watch: {
             dist: {
-                files: ['./lib/*.js'],
+                files: ['./lib/**/*.js'],
                 tasks: ['babel:dist']
             }
         },
         eslint: {
-            options: {
-                parser: 'babel-eslint'
-            },
-            target: ['index.js']
+            target: [
+                'index.js',
+                'lib/**/*.js'
+            ]
         },
         contributors: {
             options: {
@@ -55,12 +43,11 @@ module.exports = function (grunt) {
 
     require('load-grunt-tasks')(grunt)
     grunt.registerTask('default', ['build'])
-    grunt.registerTask('build', 'Build wdio-sauce-service', function () {
+    grunt.registerTask('build', 'Build wdio-jira-service', function () {
         grunt.task.run([
             'eslint',
             'clean',
-            'babel',
-            'mocha_istanbul'
+            'babel'
         ])
     })
     grunt.registerTask('release', 'Bump and tag version', function (type) {

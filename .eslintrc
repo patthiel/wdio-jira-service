@@ -1,42 +1,17 @@
 {
-    "ecmaFeatures": {
-        "arrowFunctions": true,
-        "binaryLiterals": false,
-        "blockBindings": true,
-        "classes": true,
-        "defaultParams": true,
-        "destructuring": true,
-        "forOf": true,
-        "generators": true,
-        "modules": false,
-        "objectLiteralComputedProperties": true,
-        "objectLiteralDuplicateProperties": false,
-        "objectLiteralShorthandMethods": true,
-        "objectLiteralShorthandProperties": true,
-        "octalLiterals": false,
-        "regexUFlag": false,
-        "regexYFlag": false,
-        "restParams": true,
-        "spread": true,
-        "superInFunctions": true,
-        "templateStrings": true,
-        "unicodePointEscapes": true,
-        "globalReturn": false,
-        "jsx": true
-    },
-    "env": {
-        "es6": true,
-	"browser": true,
-        "node": true
-
-    },
-    "extends": "standard",
-    "rules": {
-        "indent": [
-            2,
-            4
-        ]
-    },
-    "parser": "babel-eslint",
-    "globals": {}
+  "extends": "standard",
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "indent": [2, 4],
+    "new-cap": [0, { "newIsCap": false }]
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "webdriverio/wdio": true
+  },
+  "plugins": ["webdriverio"],
+  "globals": {}
 }
