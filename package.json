@@ -1,6 +1,6 @@
 {
   "name": "wdio-jira-service",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "WebdriverIO service for JIRA integration",
   "main": "index.js",
   "scripts": {
